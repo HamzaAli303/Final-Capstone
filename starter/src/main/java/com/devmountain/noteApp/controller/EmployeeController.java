@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/")
 public class EmployeeController {
 
@@ -33,7 +34,7 @@ public class EmployeeController {
         employeeService.addEmployee(employeeDto);
     }
 
-    @PutMapping
+    @PutMapping("/employees")
     public void updateEmployee(@RequestBody EmployeeDto employeeDto){
         employeeService.updateEmployeeById(employeeDto);
     }

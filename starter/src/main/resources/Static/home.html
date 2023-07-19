@@ -1,14 +1,48 @@
 <!doctype html>
 <html lang="en">
 <head>
-    ‹meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href=". /css/home.css" type="text/css">
-    <title>Home</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="css/home.css" type="text/css">
+    <title>Employee Management System</title>
     </head>
 <body>
-<h1>Hello World!</h1>
-<script src="./javascript/home.js' type="application/javascript"></script>
+<div class="container my-2">
+    <form id="form">
+    <h1>Employees List</h1>
+    <div>
+        <input type="text" id="firstname-input" placeholder="First Name">
+        <input type="text" id="lastname-input" placeholder="Last Name">
+        <input type="text" id="email-input" placeholder="Email">
+    </div>
+    <button type="submit" class="btn btn-primary btn-sm mb-3"> Add Employee </button>
+    </form>
+        <table border="1" class="table table-striped table-responsive-md">
+            <thead>
+            <tr>
+                <th class="normal-text">Employee First Name</th>
+                <th class="normal-text">Employee Last Name</th>
+                <th class="normal-text">Employee Email</th>
+                <th> Actions </th>
+            </tr>
+            </thead>
+            <tbody id="table-body">
+
+            </tbody>
+        </table>
+    <div class="editTable" id="editTable">
+        <div class="left">First Name: </div><div class="right"><input type="text" name="FirstName" id="updateFirstName"></div><br><br>
+        <div class="left">Last Name: </div><div class="right"><input type="text" name="LastName" id="updateLastName"></div><br><br>
+        <div class="left">Email: </div><div class="right"><input type="text" name="Email" id="updateEmail"></div><br><br>
+
+    </div>
+    <div class="editTableSubmit" id="editTableSubmit">
+</div>
+    <a class="btn btn-danger navbar-btn" href="./login.html" onclick="handleLogout()">Logout</a>
+<script src="./javascript/home.js" type="application/javascript"></script>
 </body>
 </html>

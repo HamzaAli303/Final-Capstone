@@ -24,6 +24,7 @@ public class EmployeeServiceImpl implements  EmployeeService{
     }
 
     @Override
+    @Transactional
     public void deleteEmployeeById(Long employeeId) {
         Optional<Employee> employeeOptional = employeeRepository.findById(employeeId);
         employeeOptional.ifPresent(employee ->employeeRepository.delete(employee));

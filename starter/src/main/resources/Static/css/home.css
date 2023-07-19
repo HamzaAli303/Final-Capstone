@@ -1,0 +1,15 @@
+.editTable{
+
+display: none;
+padding-top: 20px;
+width: 30%;
+transition: .5s;
+}
+
+.editTableSubmit{
+
+display: none;
+padding-top: 20px;
+width: 30%;
+transition: .5s;
+}
